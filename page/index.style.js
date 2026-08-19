@@ -1,10 +1,8 @@
+import { getDeviceInfo } from '@zos/device'
 import { px } from '@zos/utils'
 import ui from '@zos/ui'
 
-// Feste PikeW-Aufloesung statt getDeviceInfo() - keine zusaetzliche
-// Permission noetig, App zielt ohnehin nur auf dieses eine Geraet.
-export const DEVICE_WIDTH = 432
-export const DEVICE_HEIGHT = 514
+export const { width: DEVICE_WIDTH, height: DEVICE_HEIGHT } = getDeviceInfo()
 
 export const COLOR = {
   dim: 0x888888,
@@ -19,14 +17,6 @@ export const COLOR = {
   btnQuietText: 0x94a3b8,
 }
 
-// HEX/BIN nebeneinander in schmalen Spalten wurde am rechten Rand
-// abgeschnitten, selbst mit 30px Aussenrand - "BIN: 00011101" ist zu
-// lang fuer eine 178px-Spalte. Jetzt beide untereinander auf voller
-// Breite (wie Netmask/Hosts, die nie ein Problem waren), das erspart
-// jede Spaltenbreiten-Rechnerei. Ausserdem der gesamte Block enger
-// gepackt und weiter nach oben gezogen - vorher lief die unterste
-// Reihe (Presets) fast an den unteren Bildschirmrand und war nur mit
-// Scrollen sichtbar.
 const M = 30
 const GAP = 12
 const COL_W = (DEVICE_WIDTH - M * 2 - GAP) / 2
@@ -59,28 +49,28 @@ export const VAL_STYLE = {
 export const HEX_STYLE = {
   x: M,
   y: px(162),
-  w: FULL_W,
+  w: COL_W,
   h: px(28),
   color: COLOR.cyan,
   text_size: px(20),
-  align_h: ui.align.CENTER_H,
+  align_h: ui.align.LEFT,
   text: 'HEX: 0x18',
 }
 
 export const BIN_STYLE = {
-  x: M,
-  y: px(194),
-  w: FULL_W,
+  x: COL2_X,
+  y: px(162),
+  w: COL_W,
   h: px(28),
   color: COLOR.cyan,
   text_size: px(20),
-  align_h: ui.align.CENTER_H,
+  align_h: ui.align.RIGHT,
   text: 'BIN: 00011000',
 }
 
 export const MASK_STYLE = {
   x: M,
-  y: px(230),
+  y: px(198),
   w: FULL_W,
   h: px(28),
   color: COLOR.amber,
@@ -91,7 +81,7 @@ export const MASK_STYLE = {
 
 export const HOSTS_STYLE = {
   x: M,
-  y: px(262),
+  y: px(230),
   w: FULL_W,
   h: px(28),
   color: COLOR.white,
@@ -102,7 +92,7 @@ export const HOSTS_STYLE = {
 
 export const BTN_MINUS_STYLE = {
   x: M,
-  y: 310,
+  y: 278,
   w: COL_W,
   h: 60,
   radius: 20,
@@ -115,7 +105,7 @@ export const BTN_MINUS_STYLE = {
 
 export const BTN_PLUS_STYLE = {
   x: COL2_X,
-  y: 310,
+  y: 278,
   w: COL_W,
   h: 60,
   radius: 20,
@@ -128,7 +118,7 @@ export const BTN_PLUS_STYLE = {
 
 export const BTN_QUICK_STYLE = {
   x: M,
-  y: 384,
+  y: 352,
   w: FULL_W,
   h: 55,
   radius: 20,
