@@ -42,32 +42,43 @@ export const VAL_STYLE = {
   text: '/24',
 }
 
+// Aeussere Kanten (24px Rand) wurden auf dem echten Geraet rechts
+// abgeschnitten - HEX/BIN, Buttons und Presets-Leiste liefen bis auf
+// 24px an den physischen Rand heran, das reicht auf diesem Screen
+// nicht (die anderen Projekte nutzen durchgehend 30px Rand). Zwei-
+// Spalten-Layout mit 30px Aussenrand und 16px Luecke neu durchgerechnet:
+// 432 - 2*30 = 372 nutzbare Breite, zwei Spalten je (372-16)/2 = 178.
+const M = 30
+const GAP = 16
+const COL_W = (DEVICE_WIDTH - M * 2 - GAP) / 2
+const COL2_X = M + COL_W + GAP
+
 export const HEX_STYLE = {
-  x: 24,
+  x: M,
   y: px(195),
-  w: 185,
+  w: COL_W,
   h: px(30),
   color: COLOR.cyan,
-  text_size: px(20),
+  text_size: px(18),
   align_h: ui.align.LEFT,
   text: 'HEX: 0x18',
 }
 
 export const BIN_STYLE = {
-  x: 215,
+  x: COL2_X,
   y: px(195),
-  w: 193,
+  w: COL_W,
   h: px(30),
   color: COLOR.cyan,
-  text_size: px(20),
+  text_size: px(18),
   align_h: ui.align.RIGHT,
   text: 'BIN: 00011000',
 }
 
 export const MASK_STYLE = {
-  x: 24,
+  x: M,
   y: px(235),
-  w: 384,
+  w: DEVICE_WIDTH - M * 2,
   h: px(30),
   color: COLOR.amber,
   text_size: px(20),
@@ -76,9 +87,9 @@ export const MASK_STYLE = {
 }
 
 export const HOSTS_STYLE = {
-  x: 24,
+  x: M,
   y: px(270),
-  w: 384,
+  w: DEVICE_WIDTH - M * 2,
   h: px(30),
   color: COLOR.white,
   text_size: px(20),
@@ -87,9 +98,9 @@ export const HOSTS_STYLE = {
 }
 
 export const BTN_MINUS_STYLE = {
-  x: 24,
+  x: M,
   y: px(325),
-  w: 185,
+  w: COL_W,
   h: 65,
   radius: 20,
   normal_color: COLOR.btnIdle,
@@ -100,9 +111,9 @@ export const BTN_MINUS_STYLE = {
 }
 
 export const BTN_PLUS_STYLE = {
-  x: 223,
+  x: COL2_X,
   y: px(325),
-  w: 185,
+  w: COL_W,
   h: 65,
   radius: 20,
   normal_color: COLOR.btnIdle,
@@ -113,9 +124,9 @@ export const BTN_PLUS_STYLE = {
 }
 
 export const BTN_QUICK_STYLE = {
-  x: 24,
+  x: M,
   y: px(410),
-  w: 384,
+  w: DEVICE_WIDTH - M * 2,
   h: 60,
   radius: 20,
   normal_color: COLOR.btnQuiet,
