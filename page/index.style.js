@@ -120,11 +120,14 @@ export const BTN_QUICK_STYLE = {
   x: M,
   y: 364,
   w: FULL_W,
-  h: 55,
+  h: 62,
   radius: 20,
   normal_color: COLOR.btnQuiet,
   press_color: COLOR.btnQuietPress,
   color: COLOR.btnQuietText,
-  text_size: 20,
-  text: 'Presets: /16 | /24 | /28 | /30',
+  text_size: 24,
+  // "Presets:"-Praefix gestrichen, um bei groesserer Schrift innerhalb
+  // der 372px-Breite (30px Rand) zu bleiben - die Werte sprechen fuer
+  // sich, der Button sitzt ohnehin direkt unter den CIDR-Buttons.
+  text: '/16 | /24 | /28 | /30',
 }
