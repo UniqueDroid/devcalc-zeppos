@@ -29,7 +29,7 @@ export const TITLE_STYLE = {
   w: DEVICE_WIDTH,
   h: px(32),
   color: COLOR.dim,
-  text_size: px(24),
+  text_size: px(26),
   align_h: ui.align.CENTER_H,
   text: 'DEVCALC / SUBNET',
 }
@@ -52,7 +52,7 @@ export const HEX_STYLE = {
   w: COL_W,
   h: px(32),
   color: COLOR.cyan,
-  text_size: px(22),
+  text_size: px(24),
   align_h: ui.align.LEFT,
   text: 'HEX: 0x18',
 }
@@ -63,7 +63,7 @@ export const BIN_STYLE = {
   w: COL_W,
   h: px(32),
   color: COLOR.cyan,
-  text_size: px(22),
+  text_size: px(24),
   align_h: ui.align.RIGHT,
   text: 'BIN: 00011000',
 }
@@ -74,7 +74,7 @@ export const MASK_STYLE = {
   w: FULL_W,
   h: px(32),
   color: COLOR.amber,
-  text_size: px(24),
+  text_size: px(26),
   align_h: ui.align.CENTER_H,
   text: 'Netmask: 255.255.255.0',
 }
@@ -85,47 +85,47 @@ export const HOSTS_STYLE = {
   w: FULL_W,
   h: px(32),
   color: COLOR.white,
-  text_size: px(24),
+  text_size: px(26),
   align_h: ui.align.CENTER_H,
   text: 'Hosts: 254',
 }
 
 export const BTN_MINUS_STYLE = {
   x: M,
-  y: 290,
+  y: 292,
   w: COL_W,
-  h: 60,
+  h: 64,
   radius: 20,
   normal_color: COLOR.btnIdle,
   press_color: COLOR.btnPress,
   color: COLOR.white,
-  text_size: 20,
+  text_size: 24,
   text: '- 1 (CIDR)',
 }
 
 export const BTN_PLUS_STYLE = {
   x: COL2_X,
-  y: 290,
+  y: 292,
   w: COL_W,
-  h: 60,
+  h: 64,
   radius: 20,
   normal_color: COLOR.btnIdle,
   press_color: COLOR.btnPress,
   color: COLOR.white,
-  text_size: 20,
+  text_size: 24,
   text: '+ 1 (CIDR)',
 }
 
 export const BTN_QUICK_STYLE = {
   x: M,
-  y: 364,
+  y: 368,
   w: FULL_W,
-  h: 62,
+  h: 64,
   radius: 20,
   normal_color: COLOR.btnQuiet,
   press_color: COLOR.btnQuietPress,
   color: COLOR.btnQuietText,
-  text_size: 24,
+  text_size: 26,
   // "Presets:"-Praefix gestrichen, um bei groesserer Schrift innerhalb
   // der 372px-Breite (30px Rand) zu bleiben - die Werte sprechen fuer
   // sich, der Button sitzt ohnehin direkt unter den CIDR-Buttons.
