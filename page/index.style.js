@@ -46,10 +46,19 @@ export const VAL_STYLE = {
   text: '/24',
 }
 
+// HEX ("HEX: 0xXX", immer 9 Zeichen, CIDR 1-32 zweistellig hex) und BIN
+// ("BIN: XXXXXXXX", immer 13 Zeichen, 8-Bit-Binaerdarstellung) sind
+// feste Laengen, aber ungleich lang - eine 50/50-Spaltenaufteilung war
+// fuer BIN bei groesserer Schrift zu schmal und loeste eine Laufschrift
+// aus. Feste, an die jeweilige Zeichenzahl angepasste Breiten statt
+// gleicher Spalten.
+const HEX_W = 150
+const BIN_W = 200
+
 export const HEX_STYLE = {
   x: M,
   y: px(166),
-  w: COL_W,
+  w: HEX_W,
   h: px(32),
   color: COLOR.cyan,
   text_size: px(24),
@@ -58,9 +67,9 @@ export const HEX_STYLE = {
 }
 
 export const BIN_STYLE = {
-  x: COL2_X,
+  x: DEVICE_WIDTH - M - BIN_W,
   y: px(166),
-  w: COL_W,
+  w: BIN_W,
   h: px(32),
   color: COLOR.cyan,
   text_size: px(24),
