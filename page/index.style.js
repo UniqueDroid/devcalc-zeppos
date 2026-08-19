@@ -25,18 +25,18 @@ const FULL_W = DEVICE_WIDTH - M * 2
 
 export const TITLE_STYLE = {
   x: 0,
-  y: px(60),
+  y: px(58),
   w: DEVICE_WIDTH,
-  h: px(28),
+  h: px(32),
   color: COLOR.dim,
-  text_size: px(20),
+  text_size: px(24),
   align_h: ui.align.CENTER_H,
   text: 'DEVCALC / SUBNET',
 }
 
 export const VAL_STYLE = {
   x: 0,
-  y: px(94),
+  y: px(96),
   w: DEVICE_WIDTH,
   h: px(60),
   color: COLOR.green,
@@ -48,51 +48,51 @@ export const VAL_STYLE = {
 
 export const HEX_STYLE = {
   x: M,
-  y: px(162),
+  y: px(166),
   w: COL_W,
-  h: px(28),
+  h: px(32),
   color: COLOR.cyan,
-  text_size: px(20),
+  text_size: px(22),
   align_h: ui.align.LEFT,
   text: 'HEX: 0x18',
 }
 
 export const BIN_STYLE = {
   x: COL2_X,
-  y: px(162),
+  y: px(166),
   w: COL_W,
-  h: px(28),
+  h: px(32),
   color: COLOR.cyan,
-  text_size: px(20),
+  text_size: px(22),
   align_h: ui.align.RIGHT,
   text: 'BIN: 00011000',
 }
 
 export const MASK_STYLE = {
   x: M,
-  y: px(198),
+  y: px(206),
   w: FULL_W,
-  h: px(28),
+  h: px(32),
   color: COLOR.amber,
-  text_size: px(20),
+  text_size: px(24),
   align_h: ui.align.CENTER_H,
   text: 'Netmask: 255.255.255.0',
 }
 
 export const HOSTS_STYLE = {
   x: M,
-  y: px(230),
+  y: px(244),
   w: FULL_W,
-  h: px(28),
+  h: px(32),
   color: COLOR.white,
-  text_size: px(20),
+  text_size: px(24),
   align_h: ui.align.CENTER_H,
   text: 'Hosts: 254',
 }
 
 export const BTN_MINUS_STYLE = {
   x: M,
-  y: 278,
+  y: 290,
   w: COL_W,
   h: 60,
   radius: 20,
@@ -105,7 +105,7 @@ export const BTN_MINUS_STYLE = {
 
 export const BTN_PLUS_STYLE = {
   x: COL2_X,
-  y: 278,
+  y: 290,
   w: COL_W,
   h: 60,
   radius: 20,
@@ -118,7 +118,7 @@ export const BTN_PLUS_STYLE = {
 
 export const BTN_QUICK_STYLE = {
   x: M,
-  y: 352,
+  y: 364,
   w: FULL_W,
   h: 55,
   radius: 20,
