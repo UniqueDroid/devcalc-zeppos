@@ -125,6 +125,6 @@ export const BTN_QUICK_STYLE = {
   normal_color: COLOR.btnQuiet,
   press_color: COLOR.btnQuietPress,
   color: COLOR.btnQuietText,
-  text_size: 17,
+  text_size: 20,
   text: 'Presets: /16 | /24 | /28 | /30',
 }
